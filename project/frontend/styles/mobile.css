@@ -1,0 +1,170 @@
+/* src/styles/mobile.css
+   Apple-level clean visual refresh for the mobile dashboard
+   - System UI fonts (native feel)
+   - Subtle translucency & blur
+   - Gentle shadows, rounded corners
+   - Precise vertical rhythm and touch targets
+*/
+
+/* Use system UI stack for snappy native look */
+:root{
+  --bg: #f4f6f8;
+  --pane: rgba(255,255,255,0.82);    /* glass pane */
+  --muted: #6b7280;
+  --accent: #007aff;                 /* iOS blue */
+  --accent-2: #8a67ff;
+  --success: #00c9a7;
+  --card-radius: 18px;
+  --outer-radius: 28px;
+  --soft-shadow: 0 12px 30px rgba(5,15,30,0.08);
+  --micro-shadow: 0 4px 14px rgba(5,15,30,0.06);
+  --gap: 16px;
+  --inner: 16px;
+  --glass-border: rgba(255,255,255,0.6);
+}
+
+/* reset & base */
+*{box-sizing:border-box}
+html,body,#root{height:100%;margin:0;font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:#0b1220; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
+a{color:inherit;text-decoration:none}
+
+/* mobile device shell */
+.mobile-shell{
+  max-width:420px;
+  margin:36px auto;
+  min-height:100vh;
+  background: linear-gradient(180deg, #ffffff 0%, #f7f9fb 100%);
+  border-radius:var(--outer-radius);
+  box-shadow: 0 40px 90px rgba(6,12,24,0.10);
+  overflow:hidden;
+  position:relative;
+}
+
+/* topbar - breathing header */
+.mobile-topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  padding:18px 18px 8px 18px;
+  gap:12px;
+  background: transparent;
+}
+.top-left{display:flex;flex-direction:column;line-height:1}
+.small-muted{font-size:12px;color:var(--muted);letter-spacing:0.6px}
+.user-name{font-size:18px;font-weight:700;color:#0b1220;margin-top:6px}
+
+/* avatar styling */
+.top-right .avatar{
+  width:46px;height:46px;border-radius:50%;object-fit:cover;
+  border:3px solid rgba(255,255,255,0.9);
+  box-shadow: var(--micro-shadow);
+}
+
+/* main content layout with exact vertical rhythm */
+.mobile-content{
+  padding:var(--gap);
+  display:flex;
+  flex-direction:column;
+  gap:var(--gap);
+  padding-bottom:92px; /* room for bottom nav */
+}
+
+/* two insole cards row */
+.row.two-cards{display:flex;gap:12px}
+.insole-card{
+  background:var(--pane);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius:14px;
+  padding:12px;
+  box-shadow: var(--micro-shadow);
+  border: 1px solid rgba(10,14,20,0.03);
+  flex:1; min-height:110px; display:flex; flex-direction:column; justify-content:space-between;
+}
+.insole-title{color:#63707b;font-weight:700;font-size:12px;letter-spacing:0.3px}
+.insole-icon{font-size:20px;opacity:0.98}
+.battery-bar{height:10px;background:#eef4f8;border-radius:999px;margin-top:8px;overflow:hidden;border:1px solid rgba(10,14,20,0.02)}
+.bar-fill{height:100%;background:linear-gradient(90deg,var(--accent), var(--success));border-radius:999px;box-shadow: inset 0 6px 18px rgba(0,123,255,0.08)}
+.battery-text{font-size:12px;color:var(--muted);margin-top:8px}
+
+/* Today's Analysis card - airy & centered */
+.card.analysis-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.93));
+  border-radius:var(--card-radius);
+  padding:var(--inner);
+  box-shadow: var(--soft-shadow);
+  border: 1px solid rgba(10,14,20,0.03);
+}
+.analysis-header{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px}
+.analysis-title{font-weight:800;font-size:16px}
+.status-pill{
+  background: rgba(240,252,249,0.9);
+  color: #027a66;
+  font-weight:600;padding:6px 10px;border-radius:16px;font-size:12px;border:1px solid rgba(5,50,45,0.04)
+}
+.analysis-body{display:flex;gap:24px;padding:12px 6px;align-items:center;justify-content:center}
+.radial-wrap{display:flex;align-items:center;justify-content:center;min-width:120px}
+
+/* divider - subtle */
+.divider-vertical{width:1px;height:86px;background:linear-gradient(#f6f9fc,#ffffff);border-radius:4px}
+
+/* Live Pressure Map header */
+.section-title{display:flex;justify-content:space-between;align-items:center;padding:4px 2px;color:#0b1220;font-weight:700;font-size:15px}
+.live-dot{display:flex;align-items:center;gap:8px;color:#ff4d5b;font-weight:700;font-size:12px}
+
+/* pressure map card - soft, deep background */
+.card.pressure-card{
+  padding:12px;border-radius:14px;overflow:hidden;
+  background: linear-gradient(180deg,#071427 0%, #071a2a 100%);
+  border:1px solid rgba(255,255,255,0.03);
+  box-shadow: 0 20px 48px rgba(3,10,20,0.06);
+}
+
+/* give canvas space and rounded corners */
+.card.pressure-card canvas{width:100%;height:260px;border-radius:12px;display:block}
+
+/* controls row: flatter, minimal buttons */
+.controls-row{display:flex;gap:12px;margin-top:12px;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;
+  font-weight:600;font-size:14px;border:1px solid rgba(10,14,20,0.04);
+  background: #fff;color:#0b1220;cursor:pointer;box-shadow: 0 8px 24px rgba(3,10,20,0.06);
+}
+.btn.primary{
+  background: linear-gradient(180deg,var(--accent), #0069d6);
+  color:white;border:none;box-shadow: 0 14px 36px rgba(0,122,255,0.14);
+}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.05);color:var(--muted);box-shadow:none}
+
+/* weekly progress chart card */
+.chart-card{
+  background:var(--pane);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  border-radius:12px;padding:12px;box-shadow:var(--micro-shadow);border:1px solid rgba(10,14,20,0.03);
+}
+
+/* nav: translucent, thin, centered. FAB removed earlier. */
+.bottom-nav{
+  position:fixed; left:50%; transform:translateX(-50%); bottom:18px;
+  width: calc(min(420px, 100%) - 32px); display:flex;justify-content:space-between;align-items:center;
+  padding:10px 18px; gap:12px;
+  background: rgba(255,255,255,0.82); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  border-radius:14px; box-shadow: 0 18px 40px rgba(0,0,0,0.06);
+  border:1px solid rgba(10,14,20,0.04); z-index:40;
+}
+.nav-left,.nav-right{display:flex;gap:18px;align-items:center}
+.nav-item{font-size:13px;color:var(--muted);padding:6px 8px;border-radius:8px;display:flex;flex-direction:column;align-items:center}
+.nav-item.active{color:var(--accent);font-weight:700}
+
+/* minor layout helpers */
+.small-muted{font-size:12px;color:var(--muted)}
+.user-name{line-height:1}
+.radial-wrap svg{max-width:110px;height:auto}
+
+/* bigger canvas on large screens */
+@media(min-width:900px){
+  .mobile-shell{margin:48px auto}
+  .card.pressure-card canvas{height:320px}
+}
+
+/* accessibility & touch improvements */
+button, .btn, .nav-item { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
