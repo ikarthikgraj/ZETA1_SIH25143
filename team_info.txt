@@ -3,11 +3,10 @@ Institute: Dayananda Sagar University, Bengaluru Karnataka
 
 Members:
 1. S V Krithika – Team Leader 
-2. Lakshmi V – Role  
-3. Vipra J – Role  
-4. Pragati Kabbur – Role
-5. Spandana D C - Role
+2. Lakshmi V – Hardware Developer 
+3. Vipra J – Hardware Developer   
+4. Pragati Kabbur – Hardware Developer 
+5. Spandana D C - ML Engineer
 6. Karthik G Raj - Web App Developer
 
-GitHub Repo Link: 
-Contact Email: 
+Contact Email: eng23as0017@dsu.edu.in
