@@ -7,6 +7,6 @@ Members:
 3. Vipra J – Hardware Developer   
 4. Pragati Kabbur – Hardware Developer 
 5. Spandana D C - ML Engineer
-6. Karthik G Raj - Web App Developer
+6. Karthik G Raj - Web App Developer & Documentation
 
 Contact Email: eng23as0017@dsu.edu.in
