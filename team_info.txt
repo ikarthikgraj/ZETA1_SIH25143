@@ -3,14 +3,15 @@ Institute: Dayananda Sagar University, Bengaluru Karnataka
 
 Members:
 1. S V Krithika – Team Leader 
-2. Lakshmi V – Hardware Developer 
-3. Vipra J – Hardware Developer   
-4. Pragati Kabbur – Hardware Developer 
-5. Spandana D C - ML Engineer
-6. Karthik G Raj - Web App Developer & Documentation
+2. Lakshmi V – Hardware Engineer & Firmware Developer
+3. Vipra J – Hardware Engineer & Firmware Developer
+4. Pragati Kabbur – Hardware Engineer & Firmware Developer
+5. Spandana D C - ML Engineer & Debugging
+6. Karthik G Raj - Web App Developer, UI/UX & Documentation
 
 Mentors:
 1. Dr Abhinav Karan, Dayananda Sagar University
 2. Dr Jisy N K, Dayananda Sagar University
 
 Contact Email: eng23as0017@dsu.edu.in
+GitHub Repo Link: https://github.com/ikarthikgraj/ZETA1_SIH25143.git
