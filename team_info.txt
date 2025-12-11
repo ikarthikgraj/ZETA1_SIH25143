@@ -9,4 +9,8 @@ Members:
 5. Spandana D C - ML Engineer
 6. Karthik G Raj - Web App Developer & Documentation
 
+Mentors:
+1. Dr Abhinav Karan, Dayananda Sagar University
+2. Dr Jisy N K, Dayananda Sagar University
+
 Contact Email: eng23as0017@dsu.edu.in
