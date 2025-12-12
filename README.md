@@ -231,8 +231,6 @@ Clean clinician dashboard for interpretation
 
 - Cloud-based digital twin for each patient
 
-- Mobile app for home monitoring
-
 - 3D-printed orthotics recommendations
 
 - BLE mesh networking for multi-sensor footwear
